@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/main_page.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="assets/js/datatables.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Admin</title>
+</head>
+<body id="body-pd" class="body-bg">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">Logo</a>
+  
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse nav" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="#home" class="nav-link text-uppercase active" data-toggle="tab">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#news_board" class="nav-link text-uppercase" data-toggle="tab">News Board</a>
+              </li>
+              <li class="nav-item">
+                <a href="#mapping" class="nav-link text-uppercase" data-toggle="tab">Mapping</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link text-uppercase" data-toggle="tab">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#login" class="nav-link text-uppercase" data-toggle="tab" class="btn btn-light">login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <div id='content' class="container tab-content LP-center-content">
+        <div class="tab-pane active text-dark" id="home">
+            <div class="home-container-style">
+              <div class="d-flex flex-column text-center">
+                  <h1 class="fw-bolder">TANAUAN TRADING POST</h1>
+                  <h5>A WEB-BASED MANAGEMENT SYSTEM WITH MAPPING FEATURE</h5>
+              </div>
+              <div class="d-flex flex-column text-center justify-content-between">
+                <button class="btn border border-2 border-success rounded-0">APPLY FOR STALL HOLDER</button>
+                <button class="btn btn-success rounded-0">CREATE ACCOUNT FOR TRADERS</button>
+              </div>
+            </div>
+        </div>
+        <div class="tab-pane text-dark w-100" id="news_board">
+          <h1><i class="fa fa-bullhorn"></i>NEWS BOARD</h1>
+          <div class="d-flex justify-content-between">
+            <p>Be updated and get the latest news to Tanauan Trading Post.</p>
+            <p>Available Stall</p>
+          </div>
+          <div class="news-board-canvas"></div>
+        </div>
+        <div class="tab-pane text-dark w-100" id="mapping">
+          <h1><i class="fa fa-map"></i>MAPPING</h1>
+          <div class="d-flex">
+            <p>Locate the nearest and available stall you needed.</p>
+          </div>
+          <div class="news-board-canvas p-3">
+            <div class="row">
+              <div class="col">
+
+              </div>
+              <div class="col-lg-2">
+                <div class="card border border-3 border-dark bg-light p-3">
+                  <h6>MAPPING DIRECTORY</h6>
+                  <div class="d-flex justify-content-around">
+                    <ul class="map-list">
+                      <li class="map-red-list"><span class="text-dark">Item 1</span></li>
+                      <li class="map-green-list"><span class="text-dark">Item 2</span></li>
+                      <li class="map-yellow-list"><span class="text-dark">Item 3</span></li>
+                      <li class="map-blue-list"><span class="text-dark">Item 4</span></li>
+                      <li class="map-light-blue-list"><span class="text-dark">Item 5</span></li>
+                    </ul>
+                    <ul class="map-list">
+                      <li class="map-red-list"><span class="text-dark">Item 1</span></li>
+                      <li class="map-green-list"><span class="text-dark">Item 2</span></li>
+                      <li class="map-yellow-list"><span class="text-dark">Item 3</span></li>
+                      <li class="map-blue-list"><span class="text-dark">Item 4</span></li>
+                      <li class="map-light-blue-list"><span class="text-dark">Item 5</span></li>
+                    </ul>
+                  </div>
+                  <p>COLOUR GUIDES</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane text-dark" id="about">
+          <h1><i class="fa fa-info"></i>ABOUT</h1>
+          <div class="d-flex justify-content-between">
+            <p>Get to know Tanauan Trading Post.</p>
+          </div>
+          <div class="about-canvas rounded-4">
+            <div class="row">
+              <div class="col">
+                <p class="text-dark">A Trading Post is a station or store of a trader or trading company established in a thinly settled region where local products (as furs) are exchanged for manufactured goods.</p>
+                <p class="text-dark">
+                  Examples of trading posts of goods include farmer's markets, flea markets, antique stores, consignment shops, online marketplaces such as Amazon and eBay, and specialized trading platforms such as Alibaba for wholesale goods.
+                </p>
+              </div>
+              <div class="col-lg-3"></div>
+            </div>
+          </div>
+          <h3 class="my-3">CONTACTS US</h3>
+            <div class="card d-flex flex-column p-4 w-25">
+              <h6><i class="fa fa-phone"></i> +63 000 0000 000</h6>
+              <h6><i class="fa fa-envelope"></i> test@gmail.com</h6>
+              <h6><i class="fa fa-location-arrow"></i> Tanauan, Batangas</h6>
+            </div>
+        </div>
+        <div class="tab-pane text-dark" id="login">
+          <div class="body-class">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="p-4">
+                                <h1 class="text-uppercase">login</h1>
+                                <h6 class="text-uppercase">Enter to get unlimited access to date & information.</h6>
+                                <div class="col-12 mb-3">
+                                    <input type="text" class="form-control w-50" id="username" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Username">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <input type="password" class="form-control w-50 mb-3" id="password" autocomplete="off" placeholder="Password" tabindex="2">
+                                </div>
+                                <div class="w-100 mb-3">
+                                    <div class="g-recaptcha" data-sitekey="6LeTbn4nAAAAAPxjHxnvgBa-1xVzZqe6dvTHO96w" data-callback="recaptchaCallback" id="reCaptcha"></div>
+                                </div>
+                                <button class="btn btn-dark w-50" type="submit" onclick="login()" id="login">Log in</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="LogIn_image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> 
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
+</body>
+</html>

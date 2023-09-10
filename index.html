@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="body-class">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="p-4">
+                            <h1 class="text-uppercase">login</h1>
+                            <h6 class="text-uppercase">Enter to get unlimited access to date & information.</h6>
+                            <div class="col-12 mb-3">
+                                <input type="text" class="form-control w-50" id="username" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Username">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="password" class="form-control w-50 mb-3" id="password" autocomplete="off" placeholder="Password" tabindex="2">
+                            </div>
+                            <div class="w-100 mb-3">
+                                <div class="g-recaptcha" data-sitekey="6LeTbn4nAAAAAPxjHxnvgBa-1xVzZqe6dvTHO96w" data-callback="recaptchaCallback" id="reCaptcha"></div>
+                            </div>
+                            <button class="btn btn-dark w-50" type="submit" onclick="login()" id="login">Log in</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="LogIn_image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="assets/js/login.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!-- <div class="row bg-black card">
+                <div class="col-6 d-flex justify-content-center flex-column align-items-center">
+                    <div class="ms-5">
+                        <div class="container d-flex flex-column justify-content-center align-items-center p-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="choose">Username</label>
+                                    <input type="text" class="form-control w-50" id="username" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Username">
+                                </div>
+                                <div class="col-12">
+                                    <label for="choose">Password</label>
+                                    <input type="password" class="form-control w-50 mb-3" id="password" autocomplete="off" placeholder="Password" tabindex="2">
+                                    </div>
+                                    <div class="w-100 mb-3"><div class="g-recaptcha" data-sitekey="6Ldae5smAAAAACZYS1QQANhNrmOj2B5n2EgJhrWr" data-callback="recaptchaCallback" id="reCaptcha"></div></div>
+                                    <button class="btn btn-dark w-50" type="submit" onclick="login()" id="login">Log in</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="LogIn_image">
+                    </div>
+                </div>
+            </div> -->
+</body>
+</html>
