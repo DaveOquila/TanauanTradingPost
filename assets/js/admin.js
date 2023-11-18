@@ -12,10 +12,11 @@ $(document).ready(function () {
     goodReports()
 
     priceMonitoring()
+    graphReports()
     radio_checker()
     togglePassword()
     radio_checker()
-    graphReports()
+    
     
   });
   setInterval(function() {
