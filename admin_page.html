@@ -1,189 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./assets/css/main_page.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" href="assets/js/datatables.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./assets/css/system_side.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="./assets/js/dist/apexcharts.css">
+  <!-- <link rel="stylesheet" href="assets/js/datatables.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
     <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" rel="stylesheet"/>
     <link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <title>Admin</title>
+     -->
+  <link rel="shortcut  icon" href="./assets/image/LOGO_TANAUAN.png">
+  <title>Admin</title>
 </head>
-<body id="body-pd" class="body-bg">
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-        <div class="container-fluid">
-          <a href="#" class="navbar-brand">Logo</a>
-  
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navmenu"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse nav" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a href="#home" class="nav-link text-uppercase active" data-toggle="tab">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="#news_board" class="nav-link text-uppercase" data-toggle="tab">News Board</a>
-              </li>
-              <li class="nav-item">
-                <a href="#mapping" class="nav-link text-uppercase" data-toggle="tab">Mapping</a>
-              </li>
-              <li class="nav-item">
-                <a href="#about" class="nav-link text-uppercase" data-toggle="tab">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="#login" class="nav-link text-uppercase" data-toggle="tab" class="btn btn-light">login</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    
-    <div id='content' class="container tab-content LP-center-content">
-        <div class="tab-pane active text-dark" id="home">
-            <div class="home-container-style">
-              <div class="d-flex flex-column text-center">
-                  <h1 class="fw-bolder">TANAUAN TRADING POST</h1>
-                  <h5>A WEB-BASED MANAGEMENT SYSTEM WITH MAPPING FEATURE</h5>
-              </div>
-              <div class="d-flex flex-column text-center justify-content-between">
-                <button class="btn border border-2 border-success rounded-0">APPLY FOR STALL HOLDER</button>
-                <button class="btn btn-success rounded-0">CREATE ACCOUNT FOR TRADERS</button>
-              </div>
-            </div>
-        </div>
-        <div class="tab-pane text-dark w-100" id="news_board">
-          <h1><i class="fa fa-bullhorn"></i>NEWS BOARD</h1>
-          <div class="d-flex justify-content-between">
-            <p>Be updated and get the latest news to Tanauan Trading Post.</p>
-            <p>Available Stall</p>
-          </div>
-          <div class="news-board-canvas"></div>
-        </div>
-        <div class="tab-pane text-dark w-100" id="mapping">
-          <h1><i class="fa fa-map"></i>MAPPING</h1>
-          <div class="d-flex">
-            <p>Locate the nearest and available stall you needed.</p>
-          </div>
-          <div class="news-board-canvas p-3">
-            <div class="row">
-              <div class="col">
 
-              </div>
-              <div class="col-lg-2">
-                <div class="card border border-3 border-dark bg-light p-3">
-                  <h6>MAPPING DIRECTORY</h6>
-                  <div class="d-flex justify-content-around">
-                    <ul class="map-list">
-                      <li class="map-red-list"><span class="text-dark">Item 1</span></li>
-                      <li class="map-green-list"><span class="text-dark">Item 2</span></li>
-                      <li class="map-yellow-list"><span class="text-dark">Item 3</span></li>
-                      <li class="map-blue-list"><span class="text-dark">Item 4</span></li>
-                      <li class="map-light-blue-list"><span class="text-dark">Item 5</span></li>
-                    </ul>
-                    <ul class="map-list">
-                      <li class="map-red-list"><span class="text-dark">Item 1</span></li>
-                      <li class="map-green-list"><span class="text-dark">Item 2</span></li>
-                      <li class="map-yellow-list"><span class="text-dark">Item 3</span></li>
-                      <li class="map-blue-list"><span class="text-dark">Item 4</span></li>
-                      <li class="map-light-blue-list"><span class="text-dark">Item 5</span></li>
-                    </ul>
+<body>
+  <div class="testingIt loader-modal"></div>
+  <header class="header" id="header">
+    <h3 id="header-toggle" class="nav_logo text-light">
+      <span class="nav_logo-name text-light text-uppercase">Admin</span>
+    </h3>
+    <div class="ms-auto"><button class="btn btn-light" id="admin_logout">Logout</button></div>
+    <!-- <div class="header_img ms-auto"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div> -->
+  </header>
+  <div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+      <div>
+
+        <div class="nav_list">
+          <ul class="navbar-nav ms-auto">
+            <!-- <li class="nav-item">
+                          <a href="#dashboard"  class="nav-link nav_link text-light" data-toggle="tab"><i class="bi bi-house-door-fill"></i>Dashboard</a>
+                        </li> -->
+            <li class="nav-item">
+              <a href="#edit_news_board" class="nav-link nav_link text-light" data-toggle="tab"><i
+                  class="bi bi-newspaper"></i>Edit News Board</a>
+            </li>
+            <li class="nav-item">
+              <a href="#manage_account" class="nav-link nav_link text-light" data-toggle="tab"><i
+                  class="bi bi-newspaper"></i>Manage Account</a>
+            </li>
+            <li class="nav-item">
+              <a href="#manage_application" class="nav-link nav_link text-light" data-toggle="tab"><i
+                  class="bi bi-newspaper"></i>Manage Application</a>
+            </li>
+            <li class="nav-item">
+              <a href="#manage_payments" class="nav-link nav_link text-light" data-toggle="tab"><i
+                  class="bi bi-map-fill"></i>Manage Payments</a>
+            </li>
+            <li class="nav-item">
+              <a href="#manage_complaints" class="nav-link nav_link text-light" data-toggle="tab"><i
+                  class="bi bi-file-earmark-person-fill"></i>Manage Complaints</a>
+            </li>
+            <li class="nav-item">
+              <a href="#select_goods" class="nav-link nav_link text-light" data-toggle="tab" class="btn btn-light"><i
+                  class="bi bi-door-open-fill"></i>Select Goods</a>
+            </li>
+            <li class="nav-item">
+              <a href="#Reports" class="nav-link nav_link text-light" data-toggle="tab" class="btn btn-light"><i
+                  class="bi bi-journal-bookmark-fill"></i>Reports</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+  <!--Container Main start-->
+  <div id="body-pd" class=" tab-content">
+    <!-- <div class="tab-pane text-dark" id="dashboard">
+            <div class="container">
+              <h1 class="text-center py-5">DASHBOARD</h1>
+            </div>
+        </div> -->
+    <div class="tab-pane text-dark w-100 active" id="edit_news_board">
+      <div class="container">
+        <h1 class="text-center py-5">NEWS BOARD</h1>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-success" id="add_news_button">Add News +</button>
+            </div>
+            <div class="stall-dashboard-content my-3">
+              <div class="row">
+                <div class="col-lg-4 p-0 m-0">
+                  <div
+                    class="bg-dark p-3 h-100 w-100 border rounded-4 d-flex justify-content-center align-items-center">
+                    <img src="./assets/image/nb_body_image.png" class="img-fluid w-100" alt="">
                   </div>
-                  <p>COLOUR GUIDES</p>
                 </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane text-dark" id="about">
-          <h1><i class="fa fa-info"></i>ABOUT</h1>
-          <div class="d-flex justify-content-between">
-            <p>Get to know Tanauan Trading Post.</p>
-          </div>
-          <div class="about-canvas rounded-4">
-            <div class="row">
-              <div class="col">
-                <p class="text-dark">A Trading Post is a station or store of a trader or trading company established in a thinly settled region where local products (as furs) are exchanged for manufactured goods.</p>
-                <p class="text-dark">
-                  Examples of trading posts of goods include farmer's markets, flea markets, antique stores, consignment shops, online marketplaces such as Amazon and eBay, and specialized trading platforms such as Alibaba for wholesale goods.
-                </p>
-              </div>
-              <div class="col-lg-3"></div>
-            </div>
-          </div>
-          <h3 class="my-3">CONTACTS US</h3>
-            <div class="card d-flex flex-column p-4 w-25">
-              <h6><i class="fa fa-phone"></i> +63 000 0000 000</h6>
-              <h6><i class="fa fa-envelope"></i> test@gmail.com</h6>
-              <h6><i class="fa fa-location-arrow"></i> Tanauan, Batangas</h6>
-            </div>
-        </div>
-        <div class="tab-pane text-dark" id="login">
-          <div class="body-class">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="p-4">
-                                <h1 class="text-uppercase">login</h1>
-                                <h6 class="text-uppercase">Enter to get unlimited access to date & information.</h6>
-                                <div class="col-12 mb-3">
-                                    <input type="text" class="form-control w-50" id="username" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Username">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <input type="password" class="form-control w-50 mb-3" id="password" autocomplete="off" placeholder="Password" tabindex="2">
-                                </div>
-                                <div class="w-100 mb-3">
-                                    <div class="g-recaptcha" data-sitekey="6LeTbn4nAAAAAPxjHxnvgBa-1xVzZqe6dvTHO96w" data-callback="recaptchaCallback" id="reCaptcha"></div>
-                                </div>
-                                <button class="btn btn-dark w-50" type="submit" onclick="login()" id="login">Log in</button>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="LogIn_image">
-                            </div>
-                        </div>
+                <div class="col-lg-8 p-0 m-0">
+                  <div class="p-4 d-flex flex-column">
+                    <h3 class="nb-content-head">EDIT TITLE</h3>
+                    <span class="nb-content-date">DATE TODAY</span>
+                    <span class="nb-content-body my-3">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nam similique odio iure?
+                      Labore recusandae vel quia eaque facere, totam asperiores maxime, quod perferendis animi aperiam
+                      corrupti amet quaerat explicabo cum praesentium eos repellendus expedita voluptatem adipisci
+                      aliquam dolores facilis nemo! Veniam voluptatum mollitia aperiam rerum a magnam autem, sint
+                      deleniti ipsam quidem tenetur iste blanditiis veritatis, esse voluptas provident eveniet, quas
+                      adipisci. Distinctio quis neque delectus ex in eos dolorem aliquam necessitatibus, nam pariatur
+                      temporibus nisi accusantium maiores sequi!
+                    </span>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-dark">PUBLISH</button>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="stall-dashboard-content my-3">
+              <div class="row">
+                <div class="col-lg-4 p-0 m-0">
+                  <div
+                    class="bg-dark p-3 h-100 w-100 border rounded-4 d-flex justify-content-center align-items-center">
+                    <img src="./assets/image/nb_body_image.png" class="img-fluid w-100" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-8 p-0 m-0">
+                  <div class="p-4 d-flex flex-column">
+                    <h3 class="nb-content-head">Extreme heat in PH: Health risks, economic impact</h3>
+                    <span class="nb-content-date">april 24, 2023</span>
+                    <span class="nb-content-body my-3">
+                      MANILA, Philippines—As the country transitions from cold and rainy weather to the warm and dry
+                      season, the temperature increases again, and so do risks tied to hot and sunny days—such as its
+                      impact on people’s health and the economy. Last week, the Philippine Atmospheric, Geophysical and
+                      Astronomical Services Administration (Pagasa) officially declared the start of the warm and dry
+                      season, which is expected to last until May.
+                    </span>
+                    <span class="nb-content-body my-3">
+                      While the end of the northeast monsoon, or amihan, season signals the start of warmer temperatures
+                      across the country, more Filipinos—as well as foreign tourists—start to flock to popular beaches
+                      and other leisure destinations to beat the heat, by either dipping in the waters or soaking up
+                      cool wind.
+                      While these activities are natural or usual among local and foreign tourists, especially amid hot
+                      weather, there are still dangers and hazards to watch out for.
+                    </span>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-dark me-4">EDIT</button>
+                      <button class="btn btn-dark">DELETE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+
+            <div class="d-flex justify-content-end">
+              <h4>Price Monitoring</h4>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-success" id="add_commodity_button">Add Commodities +</button>
+            </div>
+            <div class="table-responsive gray_bg">
+              <table class="table align-middle table-bordered table-striped table-condensed"
+                id="priceMonitoringEditTable">
+                <thead>
+                  <tr>
+                    <th>Commodities</th>
+                    <th>Vegetable</th>
+                    <th>Wholesale Price</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody id="priceMonitoringEditData" class="text-dark">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="tab-pane text-dark" id="manage_account">
+      <h1 class="text-center py-5"><i class="fa fa-info"></i>MANAGE ACCOUNT</h1>
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table align-middle table-bordered table-striped table-condensed" id="manageAccountTable">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Contact Number</th>
+                <th>Role</th>
+                <!-- <th>Action</th> -->
+                <th>Edit</th>
+                <!-- <th>Remove</th> -->
+              </tr>
+            </thead>
+            <tbody id="manageAccountData" class="text-dark">
+
+            </tbody>
+          </table>
         </div>
+      </div>
+    </div>
+    <div class="tab-pane text-dark w-100" id="mapping">
+      <div class="container">
+        <h1 class="text-center py-5">MAP DIRECTION</h1>
+        <div class="news-board-canvas p-3">
+          <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col-lg-2">
+              <div class="card border border-3 border-dark bg-light p-3">
+                <h6>MAPPING DIRECTORY</h6>
+                <div class="d-flex justify-content-around">
+                  <ul class="map-list">
+                    <li class="map-red-list"><span class="text-dark">Item 1</span></li>
+                    <li class="map-green-list"><span class="text-dark">Item 2</span></li>
+                    <li class="map-yellow-list"><span class="text-dark">Item 3</span></li>
+                    <li class="map-blue-list"><span class="text-dark">Item 4</span></li>
+                    <li class="map-light-blue-list"><span class="text-dark">Item 5</span></li>
+                  </ul>
+                  <ul class="map-list">
+                    <li class="map-red-list"><span class="text-dark">Item 1</span></li>
+                    <li class="map-green-list"><span class="text-dark">Item 2</span></li>
+                    <li class="map-yellow-list"><span class="text-dark">Item 3</span></li>
+                    <li class="map-blue-list"><span class="text-dark">Item 4</span></li>
+                    <li class="map-light-blue-list"><span class="text-dark">Item 5</span></li>
+                  </ul>
+                </div>
+                <p>COLOUR GUIDES</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="tab-pane text-dark" id="manage_application">
+      <h1 class="text-center py-5">MANAGE APPLICATION</h1>
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table align-middle table-bordered table-striped table-condensed" id="manageApplicationTable">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Full Name</th>
+                <th>Stall Number</th>
+                <th>Contact Number</th>
+                <!-- <th>Role</th> -->
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="manageApplicationData" class="text-dark">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane text-dark" id="manage_payments">
+      <h1 class="text-center py-5"><i class="fa fa-info"></i>MANAGE PAYMENTS</h1>
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table align-middle table-bordered table-striped table-condensed" id="managePaymentTable">
+            <button class="btn btn-success my-2" id="add_payment_button">Add Payment +</button>
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Stall Number</th>
+                <th>Balance</th>
+                <th>Payment History</th>
+              </tr>
+            </thead>
+            <tbody id="managePaymentData" class="text-dark">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane text-dark" id="manage_complaints">
+      <h1 class="text-center py-5"><i class="fa fa-info"></i>MANAGE COMPLAINTS</h1>
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table align-middle table-bordered table-striped table-condensed" id="manageComplaintsTable">
+            <thead>
+              <tr>
+                <th>Complaint No.</th>
+                <th>Date of Complaint</th>
+                <th>Complainant</th>
+                <th>Role</th>
+                <th>View Complaint</th>
+                <th>Action</th>
+                <th>Close Complaint</th>
+              </tr>
+            </thead>
+            <tbody id="manageComplaintsData" class="text-dark">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane text-dark" id="select_goods">
+      <div class="container d-flex flex-column justify-content-center align-items-center">
+        <h1 class="text-center py-5">SELECT GOODS</h1>
+        <div class="card w-25 p-5">
+          <form class="d-flex flex-column">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Date</label>
+              <input type="date" class="form-control" id="date_goods">
+            </div>
+            <div class="form-group my-3">
+              <label>Type Of Good</label>
+              <select name="gameName" id="typeOfGood1" value="0" class="form-control">
+                <option value="0" disabled hidden selected>--Select Goods--</option>
+                <option value="1"> Bataw </option>
+                <option value="2"> Bawang </option>
+                <option value="3"> Gabi </option>
+                <option value="4"> Kabute </option>
+                <option value="5"> Kalabasa </option>
+                <option value="6"> Kamatis </option>
+                <option value="7"> Kamoteng kahoy </option>
+                <option value="8"> Kangkong </option>
+                <option value="9"> Karot </option>
+                <option value="10"> Kintsay </option>
+                <option value="11"> Kundol </option>
+                <option value="12"> Labanos </option>
+                <option value="13"> Labong </option>
+                <option value="14"> Letsugas </option>
+                <option value="15"> Linga </option>
+                <option value="16"> Luya </option>
+                <option value="17"> Mais </option>
+                <option value="18"> Malunggay </option>
+                <option value="19"> Mani </option>
+                <option value="20"> Mongoo </option>
+                <option value="21"> Mustasa </option>
+                <option value="22"> Patatas </option>
+                <option value="23"> Petsay </option>
+                <option value="24"> Pipino </option>
+                <option value="25"> Repolyo </option>
+                <option value="26"> Sampalok </option>
+                <option value="27"> Sibuyas </option>
+                <option value="28"> Sigarilyas </option>
+                <option value="29"> Singkamas </option>
+                <option value="30"> Talong </option>
+                <option value="31"> Togue </option>
+                <option value="32"> Upo </option>
+                <option value="33"> Wansoy </option>
+
+
+              </select>
+            </div>
+            <div class="form-group my-3">
+              <label>Type Of Good</label>
+              <select name="gameName" id="typeOfGood2" value="0" class="form-control">
+                <option value="0" disabled hidden selected>--Select Goods--</option>
+                <option value="1"> Bataw </option>
+                <option value="2"> Bawang </option>
+                <option value="3"> Gabi </option>
+                <option value="4"> Kabute </option>
+                <option value="5"> Kalabasa </option>
+                <option value="6"> Kamatis </option>
+                <option value="7"> Kamoteng kahoy </option>
+                <option value="8"> Kangkong </option>
+                <option value="9"> Karot </option>
+                <option value="10"> Kintsay </option>
+                <option value="11"> Kundol </option>
+                <option value="12"> Labanos </option>
+                <option value="13"> Labong </option>
+                <option value="14"> Letsugas </option>
+                <option value="15"> Linga </option>
+                <option value="16"> Luya </option>
+                <option value="17"> Mais </option>
+                <option value="18"> Malunggay </option>
+                <option value="19"> Mani </option>
+                <option value="20"> Mongoo </option>
+                <option value="21"> Mustasa </option>
+                <option value="22"> Patatas </option>
+                <option value="23"> Petsay </option>
+                <option value="24"> Pipino </option>
+                <option value="25"> Repolyo </option>
+                <option value="26"> Sampalok </option>
+                <option value="27"> Sibuyas </option>
+                <option value="28"> Sigarilyas </option>
+                <option value="29"> Singkamas </option>
+                <option value="30"> Talong </option>
+                <option value="31"> Togue </option>
+                <option value="32"> Upo </option>
+              </select>
+            </div>
+            <!-- <div class="form-group my-3">
+                  <label>Type Of Good</label>
+                  <select name="gameName" id="typeOfGood2" value="0" class="form-control" >
+                      <option value="0" disabled hidden selected>--Select Goods--</option>
+                      <option value="1"> Bataw </option>
+                      <option value="2"> Bawang </option>
+                      <option value="3"> Gabi </option>
+                      <option value="4"> Kabute </option>
+                      <option value="5"> Kalabasa </option>
+                      <option value="6"> Kamatis </option>
+                      <option value="7"> Kamoteng kahoy </option>
+                      <option value="8"> Kangkong </option>
+                      <option value="9"> Karot </option>
+                      <option value="10"> Kintsay </option>
+                      <option value="11"> Kundol </option>
+                      <option value="12"> Labanos </option>
+                      <option value="13"> Labong </option>
+                      <option value="14"> Letsugas </option>
+                      <option value="15"> Linga </option>
+                      <option value="16"> Luya </option>
+                      <option value="17"> Mais </option>
+                      <option value="18"> Malunggay </option>
+                      <option value="19"> Mani </option>
+                      <option value="20"> Mongoo </option>
+                      <option value="21"> Mustasa </option>
+                      <option value="22"> Patatas </option>
+                      <option value="23"> Petsay </option>
+                      <option value="24"> Pipino </option>
+                      <option value="25"> Repolyo </option>
+                      <option value="26"> Sampalok </option>
+                      <option value="27"> Sibuyas </option>
+                      <option value="28"> Sigarilyas </option>
+                      <option value="29"> Singkamas </option>
+                      <option value="30"> Talong </option>
+                      <option value="31"> Togue </option>
+                      <option value="32"> Upo </option>
+                  </select>
+                </div> -->
+            <button type="submit" class="btn btn-warning">Add Goods</button>
+            <br>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
-    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> 
-    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
-    <script src="assets/js/admin.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    
-</body>
-</html>
+    <div class="tab-pane text-dark" id="Reports">
+      <h1 class="text-center py-5"><i class="fa fa-info"></i>REPORTS</h1>
+      <div class="container">
+        <h2 class="text-center mt-5">Payment Report</h2>
+        <div style="width:80%; margin:auto;">
+          <canvas id="barChart"></canvas>
+        </div>
+        <h2 class="text-center mt-5">Seasonal Goods Record</h2>
+        <div class="table-responsive my-4">
+          <table class="table align-middle table-bordered table-striped table-condensed" id="goodReportTable">
+            <thead>
+              <tr>
+                <th>Commodity(s)</th>
+                <th>Quantity(s)</th>
+                <th>Percentage</th>
+              </tr>
+            </thead>
+            <tbody id="goodReportData" class="text-dark">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--Container Main end-->
+  <div class="modal fade" id="add_news_modal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Add News</h4>
+        </div>
+        <div class="modal-body">
+          <div class="p-0 m-0">
+            <div class="p-4 d-flex flex-column">
+              <input class="form-control w-50 my-2" type="file" accept="image/*" id="add_news_photo">
+              <h3 class="nb-content-head">EDIT TITLE</h3>
+              <span class="nb-content-date">DATE TODAY</span>
+              <span class="nb-content-body my-3">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nam similique odio iure? Labore
+                recusandae vel quia eaque facere, totam asperiores maxime, quod perferendis animi aperiam corrupti amet
+                quaerat explicabo cum praesentium eos repellendus expedita voluptatem adipisci aliquam dolores facilis
+                nemo! Veniam voluptatum mollitia aperiam rerum a magnam autem, sint deleniti ipsam quidem tenetur iste
+                blanditiis veritatis, esse voluptas provident eveniet, quas adipisci. Distinctio quis neque delectus ex
+                in eos dolorem aliquam necessitatibus, nam pariatur temporibus nisi accusantium maiores sequi!
+              </span>
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-dark">Add News</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="add_news_button_close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="add_commodity_modal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Add Commodity</h4>
+        </div>
+        <div class="modal-body">
+          <div class="p-0 m-0">
+            <div class="p-4 d-flex flex-column">
+              <input type="text" class="form-control w-100 my-1" id="admin_Commodity" autocomplete="off" autofocus
+                spellcheck="false" tabindex="1" placeholder="Commodity">
+              <input type="text" class="form-control w-100 my-1" id="admin_Vegetable" autocomplete="off" autofocus
+                spellcheck="false" tabindex="1" placeholder="Vegetable">
+              <input type="text" class="form-control w-100 my-1" id="admin_WP" autocomplete="off" autofocus
+                spellcheck="false" tabindex="1" placeholder="Wholesale Price">
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-dark w-100">Add Commodity</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="add_commodity_button_close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="edit_commodity_modal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Edit Commodity</h4>
+        </div>
+        <div class="modal-body">
+          <div class="p-0 m-0">
+            <div class="p-4 d-flex flex-column">
+              <input type="text" class="form-control w-100 my-1" id="admin_WP" autocomplete="off" autofocus
+                spellcheck="false" tabindex="1" placeholder="Wholesale Price">
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-dark w-100">Edit Commodity</button>
+                <button class="btn btn-danger w-100">Delete Commodity</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="edit_commodity_button_close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="edit_account_modal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Edit Account</h4>
+        </div>
+        <div class="modal-body">
+          <div class="p-0 m-0">
+            <div class="p-4 d-flex flex-column">
+              <h4>Carl Jerson Oquila</h4>
+              <div class="row">
+                <div class="col-lg-6 mb-3">
+                  <input type="email" class="form-control w-100" id="third_email" autocomplete="off" autofocus
+                    spellcheck="false" tabindex="1" placeholder="Email Address">
+                </div>
+                <div class="col-lg-6 mb-3">
+                  <input type="tel" class="form-control w-100" id="third_phone" autocomplete="off" autofocus
+                    spellcheck="false" tabindex="1" placeholder="Contact Number">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <input type="text" class="form-control w-100" id="third_address" autocomplete="off" autofocus
+                    spellcheck="false" tabindex="1" placeholder="Complete Address">
+                </div>
+                <label for="exampleInputEmail1"><strong>In case of emergency, please contact.</strong></label>
+                <div class="col-lg-6 mb-3">
+                  <input type="text" class="form-control w-100" id="third_fullName" autocomplete="off" autofocus
+                    spellcheck="false" tabindex="1" placeholder="Full Name">
+                </div>
+                <div class="col-lg-6 mb-3">
+                  <input type="tel" class="form-control w-100" id="third_number" autocomplete="off" autofocus
+                    spellcheck="false" tabindex="1" placeholder="Number">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 d-flex flex-column">
+                  <label for="exampleInputEmail1" class="my-2"><strong>Stall Number</strong></label>
+                  <div class=" mb-3">
+                    <input type="text" class="form-control w-100" id="third_stall" autocomplete="off" autofocus
+                      spellcheck="false" tabindex="1" placeholder="Stall">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-dark w-100">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="edit_account_button_close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="remarks_application_modal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Remarks</h4>
+        </div>
+        <div class="modal-body">
+          <div class="p-0 m-0">
+            <div class="p-4 d-flex flex-column">
+              <h4>Image</h4>
+              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia nihil, blanditiis sequi tempore
+                quas voluptatum dolores fuga reprehenderit corporis!</h5>
+              <h4>Info</h4>
+              <ul>
+                <li>All</li>
+                <li>All</li>
+                <li>All</li>
+                <li>All</li>
+              </ul>
+              <button class="btn btn-dark">Accept</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="remarks_application_button_close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="add_payment_modal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Payment</h4>
+        </div>
+        <div class="modal-body">
+          <div class="p-0 m-0">
+            <div class="p-4 d-flex flex-column">
+              <div class="d-flex flex-column">
+                <label for="exampleInputEmail1" class="my-2"><strong>Stall Number</strong></label>
+                <div class=" mb-3">
+                  <input type="text" class="form-control w-100" id="third_stall" autocomplete="off" autofocus
+                    spellcheck="false" tabindex="1" placeholder="Stall">
+                </div>
+                <label for="exampleInputEmail1" class="my-2"><strong>Balance</strong></label>
+                <div class=" mb-3">
+                  <input type="text" class="form-control w-100" id="third_stall" autocomplete="off" autofocus
+                    spellcheck="false" tabindex="1" placeholder="Balance">
+                </div>
+              </div>
+              <button class="btn btn-dark">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="add_payment_button_close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="manage_payment_history_modal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>History</h4>
+        </div>
+        <div class="modal-body">
+          <div class="p-0 m-0">
+            <div class="p-4 d-flex flex-column">
+              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia nihil, blanditiis sequi tempore
+                quas voluptatum dolores fuga reprehenderit corporis!</h5>
+              <h4>Info</h4>
+              <ul>
+                <li>All</li>
+                <li>All</li>
+                <li>All</li>
+                <li>All</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="manage_payment_history_button_close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
+  <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/admin.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.js"></script>

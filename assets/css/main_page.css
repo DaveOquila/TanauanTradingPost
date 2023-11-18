@@ -100,14 +100,10 @@ a{
 .nav_icon{
     font-size: 1.25rem
 }
-/*
-.show{
-    left: 0
+.img-logo{
+    width: 3rem !important;
+    height: auto !important;
 }
-*/
-/* .body-pd{
-    padding-left: calc(var(--nav-width) + 1rem)
-} */
 .active{
     color: var(--white-color)
 }
@@ -130,13 +126,21 @@ a{
         left: 0;
         padding: 1rem 1rem 0 0
     }
-    .show{
-        width: calc(var(--nav-width) + 156px);
-    }
 }
 .point{
     cursor: pointer;
 }
+.loader-modal {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8) url('../image/LOGO_TANAUAN.png') 50% 50% no-repeat;
+  
+  }
 /* ------------------------------------------------------------ */
 
 .panel{
@@ -194,24 +198,26 @@ label{
 .alert {
     display: none;
     margin-top: 10px;
-  }
-  .login_phase_two {
-    display: none;
-  }
+}
+.login_phase_two {
+display: none;
+}
 
-  /* Home */
-  .home-container-style{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    height: 30vh !important;
-  }
-
-  .news-board-canvas{
-    height: 50vh;
-    background: #E4E4E4;
-  }
+/* Home */
+.home-container-style{
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+align-items: center;
+height: 30vh !important;
+}
+.news-board-canvas{
+height: 50vh;
+background: #E4E4E4;
+}
+.gray_bg{
+    background: #ffffff;
+}
 
 /* Mapping */
 .news-board-canvas h6{
@@ -260,6 +266,58 @@ label{
      font-size:20pt !important;
     color: #54B4D3;
 }
+.border-stall-center{
+    border-right: black solid 10px !important;
+}
+.border-stall-start{
+    border-left: black solid 10px !important;
+}
+.mapping-line-none{
+    border: 5px solid black;
+    opacity: 100% !important;
+    width: 10rem;
+    height: 5px;
+}
+.mapping-line-1{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-2{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-3{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-4{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-5{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-6{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-7{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-8{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-9{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-10{
+    opacity: 0%;
+    width: 10rem;
+}
 
 /* About */
 .about-canvas{
@@ -267,3 +325,5 @@ label{
     padding: 1rem;
     
 }
+
+

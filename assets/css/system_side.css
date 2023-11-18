@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+:root{
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #408B55;
+    --first-color-light: #AFA5D9;
+    --white-color: #005C1A;--body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;--z-fixed: 100
+}
+*,::before,::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.body-bg{
+    font-family: 'Inter', sans-serif;
+    background-image: url('../image/login_BG.png');
+    background-size: cover;
+    background-position: center center fixed;
+}
+body{
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s
+}
+a{
+    text-decoration: none
+}
+.header{
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 1rem;
+    
+    background-color: var(--white-color);
+    z-index: 101;
+    transition: .5s
+}
+.header_toggle{
+    color: var(--first-color);
+    font-size: 1.5rem !important;
+    cursor: pointer;
+}
+.header_img{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden
+}
+.header_img img{
+    width: 40px
+}
+.l-navbar{
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--first-color);
+    padding: .5rem 1rem 0 0;
+    transition: .5s;
+    z-index: var(--z-fixed)
+}.nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-top: 5rem;
+}
+.nav_logo, .nav_link{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem 0 .5rem 1.5rem
+}
+.nav_logo-icon{
+    font-size: 1.25rem;
+    color: var(--white-color)
+}
+.nav_logo-name{
+    color: var(--white-color);
+    font-weight: 700
+}
+.nav_link{
+    position: relative;
+    color: var(--first-color-light);
+    margin-bottom: 1.5rem;
+    transition: .3s
+}
+.nav_link:hover{
+    color: var(--white-color)
+}
+.nav_icon{
+    font-size: 1.25rem
+}
+.show-side-bar{
+    left: 0
+}
+.body-pd{
+    padding-left: calc(var(--nav-width))
+}
+.active{
+    color: var(--white-color)
+}
+.active::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 32px;
+    background-color: white
+}
+.height-100{
+    height:100vh
+}
+
+#header-toggle{
+    cursor: pointer !important;
+}
+.img-logo{
+    width: 3rem !important;
+    height: auto !important;
+}
+.loader-modal {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8) url('../image/LOGO_TANAUAN.png') 50% 50% no-repeat;
+  
+  }
+
+/* News Board */
+.stall-dashboard-content{
+    border-radius: 1rem;
+    background: #DDD;
+}
+.nb-content-head{
+    font-weight: 600;
+}
+.nb-content-date{
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+
+/* Mapping */
+.news-board-canvas h6{
+    font-size: .9rem;
+}
+.news-board-canvas p{
+    font-size: .7rem;
+    text-align: center;
+}
+.map-list{ 
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.map-list li{ 
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    height: 3vh !important;
+}
+.map-red-list:before {
+    content:"•";
+     font-size:20pt !important;
+    color: #DC4C64;
+}
+.map-green-list:before {
+    content:"•";
+     font-size:20pt !important;
+    color: #14A44D;
+}
+.map-yellow-list:before {
+    content:"•";
+     font-size:20pt !important;
+    color: #E4A11B;
+}
+.map-blue-list:before {
+    content:"•";
+     font-size:20pt !important;
+    color: #3B71CA;
+}
+.map-light-blue-list:before {
+    content:"•";
+     font-size:20pt !important;
+    color: #54B4D3;
+}
+.border-stall-center{
+    border-right: black solid 10px !important;
+}
+.border-stall-start{
+    border-left: black solid 10px !important;
+}
+.mapping-line-none{
+    border: 5px solid black;
+    opacity: 100% !important;
+    width: 10rem;
+    height: 5px;
+}
+.mapping-line-1{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-2{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-3{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-4{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-5{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-6{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-7{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-8{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-9{
+    opacity: 0%;
+    width: 10rem;
+}
+.mapping-line-10{
+    opacity: 0%;
+    width: 10rem;
+}
+
+/* Components */
+.table thead{
+    background: #2F2E2E !important;
+    
+
+}
+th{
+    color: white !important;
+}
+.dt-button{
+    padding: .5rem 1rem;
+    background: #2F2E2E;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+.dataTables_filter{
+    display: flex;
+    justify-content: end;
+    margin: 1rem 0;
+}
+
+/* Complaints */
+.stall-complaint-label{
+    padding: 1rem;
+    background: #2F2E2E !important;
+    color: white;
+    border-radius: 1rem;
+
+}
+.dataTables_filter{
+    justify-content: start !important;
+}
+
+@media screen and (max-width: 991px){
+    .d-none-991{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px){
+    body{
+        margin: calc(var(--header-height) + 1rem) 0 0 0;
+        padding-left: calc(var(--nav-width) + 2rem)
+    }
+    .header{
+        height: calc(var(--header-height) + 1rem);
+        /* padding: 0 2rem 0 calc(var(--nav-width) + 2rem) */
+    }
+    .header_img{
+        width: 40px;height: 40px
+    }
+    .header_img img{
+        width: 45px
+    }
+    .l-navbar{
+        left: 0;
+        padding: 1rem 1rem 0 0
+    }
+    .show-side-bar{
+        width: calc(var(--nav-width) + 156px)
+    }
+    .body-pd{
+        padding-left: calc(var(--nav-width) + 100px)
+    }
+}

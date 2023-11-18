@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/system_side.css">
+    <!-- <link rel="stylesheet" href="assets/js/datatables.min.css"> -->
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+    <!-- <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" rel="stylesheet"/> -->
+    <!-- <link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.css" rel="stylesheet"/> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="shortcut  icon" href="./assets/image/LOGO_TANAUAN.png">
+    <title>Stall</title>
+</head>
+<body>
+    <header class="header d-flex" id="header">
+        <h3 id="header-toggle" class="nav_logo text-light"> 
+            <span class="nav_logo-name text-light text-uppercase">Stall</span> 
+            
+        </h3>
+        <div class="ms-auto"><button class="btn btn-light" id="logout">Logout</button></div>
+        <!-- <div class="header_img ms-auto"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div> -->
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> 
+                
+                <div class="nav_list"> 
+                    <ul class="navbar-nav ms-auto">
+                        <!-- <li class="nav-item">
+                          <a href="#home"  class="nav-link nav_link text-light" data-toggle="tab"><i class="bi bi-house-door-fill"></i>Dashboard</a>
+                        </li> -->
+                        <li class="nav-item">
+                          <a href="#news_board" class="nav-link nav_link text-light" data-toggle="tab"><i class="bi bi-newspaper"></i>News Board</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#mapping"  class="nav-link nav_link text-light" data-toggle="tab"><i class="bi bi-map-fill"></i>Map</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#about" class="nav-link nav_link text-light" data-toggle="tab"><i class="bi bi-file-earmark-person-fill"></i>Payment</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#login" class="nav-link nav_link text-light" data-toggle="tab" class="btn btn-light"><i class="bi bi-door-open-fill"></i>Complaints</a>
+                        </li>
+                      </ul>
+                </div>
+        </nav>
+    </div>
+    <!--Container Main start-->
+    <div id="body-pd" class=" tab-content">
+        <div class="tab-pane text-dark" id="home">
+            <div class="container">
+              <h1 class="text-center py-5">DASHBOARD</h1>
+            </div>
+        </div>
+        <div class="tab-pane text-dark w-100 active" id="news_board">
+          <div class="container">
+            <h1 class="text-center py-5">NEWS BOARD</h1>
+            <div class="stall-dashboard-content">
+              <div class="row">
+                <div class="col-lg-4 p-0 m-0">
+                  <div class="bg-dark p-3 h-100 w-100 border rounded-4 d-flex justify-content-center align-items-center">
+                    <img src="./assets/image/nb_body_image.png" class="img-fluid w-100" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-8 p-0 m-0">
+                  <div class="p-4 d-flex flex-column">
+                    <h3 class="nb-content-head">Extreme heat in PH: Health risks, economic impact</h3>
+                    <span class="nb-content-date">april 24, 2023</span>
+                    <span class="nb-content-body my-3">
+                      MANILA, Philippines—As the country transitions from cold and rainy weather to the warm and dry season, the temperature increases again, and so do risks tied to hot and sunny days—such as its impact on people’s health and the economy. Last week, the Philippine Atmospheric, Geophysical and Astronomical Services Administration (Pagasa) officially declared the start of the warm and dry season, which is expected to last until May.
+                    </span>
+                    <span  class="nb-content-body my-3">
+                      While the end of the northeast monsoon, or amihan, season signals the start of warmer temperatures across the country, more Filipinos—as well as foreign tourists—start to flock to popular beaches and other leisure destinations to beat the heat, by either dipping in the waters or soaking up cool wind.
+                      While these activities are natural or usual among local and foreign tourists, especially amid hot weather, there are still dangers and hazards to watch out for.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane text-dark w-100" id="mapping">
+          <div class="container">
+            <h1 class="text-center py-5">MAP DIRECTION</h1>
+            <div class="news-board-canvas p-3">
+              <div class="row">
+                <div class="col">
+                  <div class="border border-dark">
+                    <div class="row">
+                      <div class="col-12 d-flex justify-content-center">
+                        <h5>Exit</h5>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-end border-stall-all">
+                        <div class="d-flex justify-content-end">
+                          <div class="">
+                            <button class="btn btn-danger p-4" id="map_stall_1">Stall 1</button>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-1">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-start border-stall-all2">
+                        <div class="d-flex justify-content-start">
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-2">
+                          </div>
+                          <div class="">
+                            <button class="btn btn-primary p-4" id="map_stall_2">Stall 2</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-end border-stall-all">
+                        <div class="d-flex justify-content-end">
+                          <div class="">
+                            <button class="btn btn-warning p-4" id="map_stall_3">Stall 3</button>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-3">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-start border-stall-all2">
+                        <div class="d-flex justify-content-start">
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-4">
+                          </div>
+                          <div class="">
+                            <button class="btn btn-warning p-4" id="map_stall_4">Stall 4</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-end border-stall-all">
+                        <div class="d-flex justify-content-end">
+                          <div class="">
+                            <button class="btn btn-primary p-4" id="map_stall_5">Stall 5</button>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-5">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-start border-stall-all2">
+                        <div class="d-flex justify-content-start">
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-6">
+                          </div>
+                          <div class="">
+                            <button class="btn btn-danger p-4" id="map_stall_6">Stall 6</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-end border-stall-all">
+                        <div class="d-flex justify-content-end">
+                          <div class="">
+                            <button class="btn btn-warning p-4" id="map_stall_7">Stall 7</button>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-7">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-start border-stall-all2">
+                        <div class="d-flex justify-content-start">
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-8">
+                          </div>
+                          <div class="">
+                            <button class="btn btn-primary p-4" id="map_stall_8">Stall 8</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-end border-stall-all">
+                        <div class="d-flex justify-content-end">
+                          <div class="">
+                            <button class="btn btn-danger p-4" id="map_stall_9">Stall 9</button>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-9">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 py-4 px-0 d-flex justify-content-start border-stall-all2">
+                        <div class="d-flex justify-content-start">
+                          <div class="d-flex justify-content-center">
+                            <hr class="mapping-line-10">
+                          </div>
+                          <div class="">
+                            <button class="btn btn-success p-4" id="map_stall_10">Stall 10</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center">
+                        <h5>Entrance</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="card border border-3 border-dark bg-light p-3">
+                    <h6>MAPPING DIRECTORY</h6>
+                    <div class="d-flex justify-content-around">
+                      <ul class="map-list">
+                        <li class="map-red-list"><span class="text-dark">Item 1</span></li>
+                        <li class="map-green-list"><span class="text-dark">Item 2</span></li>
+                        <li class="map-yellow-list"><span class="text-dark">Item 3</span></li>
+                        <li class="map-blue-list"><span class="text-dark">Item 4</span></li>
+                        <li class="map-light-blue-list"><span class="text-dark">Item 5</span></li>
+                      </ul>
+                      <ul class="map-list">
+                        <li class="map-red-list"><span class="text-dark">Item 1</span></li>
+                        <li class="map-green-list"><span class="text-dark">Item 2</span></li>
+                        <li class="map-yellow-list"><span class="text-dark">Item 3</span></li>
+                        <li class="map-blue-list"><span class="text-dark">Item 4</span></li>
+                        <li class="map-light-blue-list"><span class="text-dark">Item 5</span></li>
+                      </ul>
+                    </div>
+                    <p>COLOUR GUIDES</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="tab-pane text-dark" id="about">
+          <h1 class="text-center py-5"><i class="fa fa-info"></i>PAYMENT HISTORY</h1>
+          <div class="container">
+            <h4>Remaining Balance: 0.00</h4>
+            <div class="table-responsive">
+              <table class="table align-middle table-bordered table-striped table-condensed" id="paymentHistoryTable">
+                  <thead>
+                      <tr>
+                          <th>Cutoff Date</th>
+                          <th>With Penalty (Y/N)</th>
+                          <th>Payment Status</th>
+                      </tr>
+                  </thead>
+                  <tbody id="paymentHistoryData" class="text-dark">
+                                            
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane text-dark" id="login">
+          
+            <div class="container">
+              <h1 class="text-center py-5"><i class="fa fa-info"></i>COMPLAINTS</h1>
+              <div class="stall-complaint-label mb-3"><span>We provide a space where you can openly share your feedback, concerns, or suggestions. We will review each concerns and provide a feedback towards resolving any issues you may have.</span></div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <textarea rows="10" style="height:100%;" class="form-control" label></textarea>
+                </div>
+                <!-- <div class="col-lg-4">
+                  <div class="table-responsive">
+                    <table class="table align-middle table-bordered table-striped table-condensed" id="complaintHistoryTable">
+                        <thead>
+                            <tr>
+                                <th>Complaint date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="complaintHistoryData" class="text-dark">
+                                                  
+                        </tbody>
+                    </table>
+                  </div>
+                </div> -->
+              </div>
+              <div class="my-3">
+                <div class="my-1">
+                  <label for="traders_photo_one" class="form-label">Upload Photo</label>
+                  <input class="form-control" type="file" accept="image/*" id="stall_photo_one">
+                </div>
+                <button class="btn btn-success">Submit</button>
+              </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Container Main end-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> 
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script> -->
+    

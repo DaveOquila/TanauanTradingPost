@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log($('#gameName').val())
+    // console.log($('#gameName').val())
 });
 
 // Get Data using Dropdown
@@ -20,7 +20,7 @@ const login = () => {
         method: 'POST',
         url: 'assets/php/login.php',
         data:{
-            username: $('#username').val(),
+            username: $('#loginEmail').val(),
             password: $('#password').val()
         },
         dataType: 'json',
@@ -41,7 +41,7 @@ const login = () => {
                 }
                 }).then((result) => {
                     sessionStorage.setItem("user", 'Admin')
-                    window.location.href = "admin_page.html?"
+                    window.location.href = "index.html?"
                 })
             }else if(result[0] == 2 && grecaptcha.getResponse().length !== 0){
                 let timerInterval
@@ -58,8 +58,44 @@ const login = () => {
                     clearInterval(timerInterval)
                 }
                 }).then((result) => {
-                        sessionStorage.setItem("user", 'Admin')
-                        window.location.href = "https://www.google.com/" 
+                        sessionStorage.setItem("admin", 'Admin')
+                        window.location.href = "admin_page.html" 
+                })
+            }else if(result[0] == 3 && grecaptcha.getResponse().length !== 0){
+                let timerInterval
+                Swal.fire({
+                    title: 'Loading...',
+                    timer: 2000,
+                    timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()
+                    timerInterval = setInterval(() => {
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                }
+                }).then((result) => {
+                        sessionStorage.setItem("stall holder", 'Admin')
+                        window.location.href = "stall_page.html" 
+                })
+            }else if(result[0] == 4 && grecaptcha.getResponse().length !== 0){
+                let timerInterval
+                Swal.fire({
+                    title: 'Loading...',
+                    timer: 2000,
+                    timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()
+                    timerInterval = setInterval(() => {
+                    }, 100)
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                }
+                }).then((result) => {
+                        sessionStorage.setItem("Trader", 'Admin')
+                        window.location.href = "trader_page.html" 
                 })
             }else{
                 Swal.fire({
@@ -82,7 +118,39 @@ const login = () => {
         })
     })
 }
+const logout = () => { 
+    Swal.fire({
+        icon: 'info',
+        title: 'Are you sure you want to Logout?',
+        confirmButtonText: 'Okay',
+        showCancelButton: true
+      }).then((res) => {
+        if (res.isConfirmed) {
+            window.location.href = "login.html"
+        }
+    
+      })
+}
 $('#login').on('click', function(e){
     
     login()
 })
+$('#logout').on('click', function(e){
+    
+    logout()
+})
+
+const SendEmail =()=>{
+    
+    var params ={
+        from_name : $("#TestName").val(),
+        email_id : $("#TestEmail").val(),
+        message : $("#TestText").val()
+    }
+    emailjs.send("service_4zgdtai","template_9xscl2n",params).then((res)=>{
+        alert("Success!" + res.status);
+        console.log(res)
+    })
+    console.log($("#TestName").val())
+    alert(1)
+}

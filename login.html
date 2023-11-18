@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+    <link rel="shortcut  icon" href="./assets/image/LOGO_TANAUAN.png">
+    <title>Login</title>
+    
+</head>
+<body>
+    <div class="body-class">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="p-4">
+                            <h1 class="text-uppercase"><a href="./index.html"><i class="fa fa-arrow-left"></i></a> login</h1>
+                            <h6 class="text-uppercase">Enter to get unlimited access to date & information.</h6>
+                            <div class="col-12 mb-3 w-75">
+                                <input type="email" class="form-control" id="loginEmail" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Email">
+                            </div>
+                            <div class="col-12 mb-3 w-75">
+                                <input type="password" class="form-control mb-3" id="password" autocomplete="off" placeholder="Password" tabindex="2">
+                            </div>
+                            <div class=" mb-3">
+                                <div class="g-recaptcha" data-sitekey="6LeTbn4nAAAAAPxjHxnvgBa-1xVzZqe6dvTHO96w" data-callback="recaptchaCallback" id="reCaptcha"></div>
+                            </div>
+                            <button class="w-75 btn btn-dark" type="submit" onclick="login()" id="login">Log in</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="LogIn_image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="assets/js/login.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_jsJicYikHFSbn-QKee1uq");
+        })();
+    </script>
+</body>
+</html>

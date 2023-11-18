@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/system_side.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+    <!-- <link rel="stylesheet" href="assets/js/datatables.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     -->
+     <link rel="shortcut  icon" href="./assets/image/LOGO_TANAUAN.png">
+     <title>Trader</title>
+</head>
+<body class="body-bg">
+    <header class="header d-flex justify-content-between" id="header">
+      <a href="#" class="navbar-brand">
+        <img src="./assets/image/LOGO_TANAUAN.png" class="img-logo" alt="">
+      </a>
+        <!-- <h3 id="header-toggle" class="nav_logo text-light"> 
+            <span class="nav_logo-name text-light text-uppercase">Trader</span> 
+        </h3> -->
+        <!-- <div class="header_img ms-auto"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div> -->
+      <div class="">
+        <Button class="btn btn-light" id="goHome">Home</Button>
+        <Button class="btn btn-light" id="goLogin">Login</Button>
+      </div>
+    </header>
+    <!--Container Main start-->
+    <div class="container pt-5">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="card border-3 rounded-4 p-4 w-50">
+          <div class="">
+            <h1 class="text-uppercase">Create Account</h1>
+              <div class="row">
+                  
+                <div class="col-lg-4 mb-3">
+                  <input type="text" class="form-control w-100" id="trader_firstName" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="First name">
+                </div>
+                <div class="col-lg-4 mb-3">
+                  <input type="text" class="form-control w-100" id="trader_middleName" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Middle name">
+                </div>
+                <div class="col-lg-4 mb-3">
+                  <input type="text" class="form-control w-100" id="trader_lastname" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Last name">
+                </div>
+                  <div class="col-lg-12 mb-3">
+                    <input type="email" class="form-control w-100" id="traders_email" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Email Address">
+                  </div>
+                  <div class="col-lg-12 mb-3">
+                    <input type="tel" class="form-control w-100" id="traders_phone" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Phone Number">
+                  </div>
+                  <div class="col-lg-12 mb-3">
+                    <select name="gameName" id="typeOfVehicle" value="0" class="form-control" >
+                      <option value="0" disabled hidden selected>Type of Vehicle</option>
+                      <option value="1"> Truck </option>
+                      <option value="2"> Car </option>
+                      <option value="3"> Tricycle </option>
+                      <option value="4"> Cariton </option>
+                  </select>
+                    <!-- <input type="text" class="form-control w-100" id="traders_vehicle" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Type of Vehicle"> -->
+                  </div>
+                <div class="col-lg-12 mb-3">
+                  <input type="text" class="form-control w-100" id="traders_plate" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Plate Number">
+                </div>
+                <div class="col-lg-12 d-flex justify-content-around mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="0" id="radio_driver">
+                    <label class="form-check-label" for="radio_driver">
+                      Driver
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1" id="Radio_middle_man" checked>
+                    <label class="form-check-label" for="Radio_middle_man">
+                      Magdadala
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2" id="radio_k" checked>
+                    <label class="form-check-label" for="radio_k">
+                      Kwartahera
+                    </label>
+                  </div>
+                </div>
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <input type="text" class="form-control w-100" id="traders_un" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Username">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <input type="password" class="form-control w-100" id="traders_pw" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Password">
+                </div>
+                <div class="col-lg-12 mb-3">
+                  <input type="password" class="form-control w-100" id="traders_fpw" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Confirm Password">
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <div class="my-1">
+                  <label for="traders_photo_one" class="form-label">Upload 2x2 Picture +</label>
+                  <input class="form-control" type="file" id="traders_photo_one">
+                </div>
+                <div class="">
+                  <button class="btn btn-success my-2 w-100" id="create_trader">Create Account</button>
+                </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <!--Container Main end-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> 
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script> -->
+    
