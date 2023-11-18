@@ -508,7 +508,7 @@ const priceMonitoringEdit = async ()=>{
                     data += `<td class="">${result.results[h].name}</td>`
                     data += `<td class="">None</td>`
                     data += `<td class="">0.00</td>`
-                    data += `<td class=""><button class="btn btn-warning" onclick="edit_commodity_button()">Edit</button></td>`
+                    data += `<td class=""><button class="btn btn-primary" onclick="edit_commodity_button()">Edit</button></td>`
                     data += "</tr>"
                 }
                 $("#priceMonitoringEditData").html(data)
@@ -1018,6 +1018,9 @@ $('#index_available_stall').on('click', function(e){
 $('#index_available_stall_close').on('click', (e)=>{
     $('#avaible_stall_modal').modal('hide');
 })
+const reloadPage =()=>{
+    window.location.reload();
+}
 
 // Mapping
 $('#map_stall_1').on('click', function(e){
