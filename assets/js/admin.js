@@ -9,14 +9,13 @@ $(document).ready(function () {
     userBalance()
     complaintStatus()
     priceMonitoringEdit()
-    graphReports()
     goodReports()
 
     priceMonitoring()
     radio_checker()
     togglePassword()
     radio_checker()
-    
+    graphReports()
     
   });
   setInterval(function() {
@@ -1036,7 +1035,9 @@ $('#map_stall_1').on('click', function(e){
     Swal.fire({
         icon: 'info',
         title: 'Stall #1',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
     
@@ -1057,7 +1058,9 @@ $('#map_stall_2').on('click', function(e){
     Swal.fire({
         icon: 'info',
         title: 'Stall #2',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
@@ -1077,7 +1080,9 @@ $('#map_stall_3').on('click', function(e){
      Swal.fire({
         icon: 'info',
         title: 'Stall #3',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
@@ -1097,7 +1102,9 @@ $('#map_stall_4').on('click', function(e){
      Swal.fire({
         icon: 'info',
         title: 'Stall #4',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
@@ -1117,7 +1124,9 @@ $('#map_stall_5').on('click', function(e){
      Swal.fire({
         icon: 'info',
         title: 'Stall #5',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
@@ -1137,7 +1146,9 @@ $('#map_stall_6').on('click', function(e){
      Swal.fire({
         icon: 'info',
         title: 'Stall #6',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
@@ -1157,7 +1168,9 @@ $('#map_stall_7').on('click', function(e){
      Swal.fire({
         icon: 'info',
         title: 'Stall #7',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
@@ -1177,7 +1190,9 @@ $('#map_stall_8').on('click', function(e){
      Swal.fire({
         icon: 'info',
         title: 'Stall #8',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
@@ -1197,7 +1212,9 @@ $('#map_stall_9').on('click', function(e){
      Swal.fire({
         icon: 'info',
         title: 'Stall #9',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
@@ -1217,7 +1234,9 @@ $('#map_stall_10').on('click', function(e){
      Swal.fire({
         icon: 'info',
         title: 'Stall #10',
-        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">`,
+        html:`<img src="./assets/image/next-two.png" class="rounded-5 w-75 m-3" alt="">
+        <br>
+        <h4>Owner: Doe</h4>`,
         confirmButtonText: 'Okay',
       })
 })
