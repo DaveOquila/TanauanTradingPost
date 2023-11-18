@@ -18,7 +18,7 @@ $("#gameName").change(function(){
 const login = () => { 
     $.ajax({
         method: 'POST',
-        url: '/assets/php/login.php',
+        url: '../assets/php/login.php',
         data:{
             username: $('#loginEmail').val(),
             password: $('#password').val()
