@@ -472,27 +472,34 @@
           <h4>Add News</h4>
         </div>
         <div class="modal-body">
+          <div class="container pt-5">
+            <div class="">
+              <div class="row">
+                <div class="col-lg-12">
+                    <div class="px-4">
+                        <div class="col-12 mb-3">
+                            <input type="text" class="form-control w-50" id="second_lastname" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Title">
+                        </div>
+                        <div class="col-12 mb-3">
+                          <input type="date" class="form-control w-100" id="third_birthday" autocomplete="off" autofocus spellcheck="false" tabindex="1" placeholder="Birthday">
+                        </div>
+                        <div class="col-12">
+                          <textarea rows="10" style="height:100%;" class="form-control" id="second-textArea" label></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
           <div class="p-0 m-0">
             <div class="p-4 d-flex flex-column">
               
-              <h3 class="nb-content-head">EDIT TITLE</h3>
-              <span class="nb-content-date">DATE TODAY</span>
-              <span class="nb-content-body my-3">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nam similique odio iure? Labore
-                recusandae vel quia eaque facere, totam asperiores maxime, quod perferendis animi aperiam corrupti amet
-                quaerat explicabo cum praesentium eos repellendus expedita voluptatem adipisci aliquam dolores facilis
-                nemo! Veniam voluptatum mollitia aperiam rerum a magnam autem, sint deleniti ipsam quidem tenetur iste
-                blanditiis veritatis, esse voluptas provident eveniet, quas adipisci. Distinctio quis neque delectus ex
-                in eos dolorem aliquam necessitatibus, nam pariatur temporibus nisi accusantium maiores sequi!
-              </span>
               <input class="form-control w-50 my-2" type="file" accept="image/*" id="add_news_photo">
-              <div class="d-flex justify-content-end">
-                <button class="btn btn-dark">Add News</button>
-              </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
+          <button class="btn btn-dark">Add News</button>
           <button type="button" class="btn btn-success" id="add_news_button_close">Close</button>
         </div>
       </div>
@@ -612,15 +619,14 @@
         <div class="modal-body">
           <div class="p-0 m-0">
             <div class="p-4 d-flex flex-column">
-              <h4>Image</h4>
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia nihil, blanditiis sequi tempore
-                quas voluptatum dolores fuga reprehenderit corporis!</h5>
+              <h3>Information Of Letter</h3>
               <h4>Info</h4>
               <ul>
-                <li>All</li>
-                <li>All</li>
-                <li>All</li>
-                <li>All</li>
+                <li>Full Name</li>
+                <li>Birthday</li>
+                <li>Email</li>
+                <li>Contact Number</li>
+                <li>Address</li>
               </ul>
               <button class="btn btn-dark">Accept</button>
             </div>
@@ -673,15 +679,15 @@
         <div class="modal-body">
           <div class="p-0 m-0">
             <div class="p-4 d-flex flex-column">
-              <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officia nihil, blanditiis sequi tempore
-                quas voluptatum dolores fuga reprehenderit corporis!</h5>
+              <h5>Pending Payment</h5>
               <h4>Info</h4>
               <ul>
-                <li>All</li>
+                <li>Date | Balance</li>
                 <li>All</li>
                 <li>All</li>
                 <li>All</li>
               </ul>
+              <h2>Total Balance: 0.00</h2>
             </div>
           </div>
         </div>
